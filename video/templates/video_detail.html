@@ -1,0 +1,23 @@
+{% extends 'generic_detail.html' %}
+
+{% block extra_details %}
+    <hr/>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h4><b><i> Comments Section: </i></b></h4>
+    <a href="{% url 'add_comment' pk=object.pk %}">Create Comments</a>
+    <h4><b><i>Older Comments:</i></b></h4>
+
+    {% for c in object.comment_set.all %}
+        <p><i>Comment {{ forloop.counter }}</i></p>
+        <p> Name: {{ c.name }} </p>
+        <p> Comment {{ c.comment }} </p>
+        <p> Comment Date {{ c.created_date }} </p>
+
+        {% if not forloop.last %}
+            <hr/>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+{% endblock %}
