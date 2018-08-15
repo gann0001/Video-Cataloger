@@ -1,9 +1,0 @@
-<li class="{% if 'people' in sidebar_group %}active{% endif %}">
-    <a href="#" data-toggle="collapse" data-target="#people" class="{% if 'people' in sidebar_group %}collapsed{% endif %}" aria-expanded="true">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> People <span class="caret"></span>
-    </a>
-    <ul id="people" class="sidebar-items collapse {% if 'people' in sidebar_group %}in{% endif %}" aria-expanded="true">
-        <li>{% include '_sidebar_item.html' with url='browse_person_role' label='Browse Person Role'%}</li>
-    </ul>
-</li>
-
