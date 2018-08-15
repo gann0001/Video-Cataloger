@@ -1,0 +1,13 @@
+
+
+<li class="{% if 'taxonomy' in sidebar_group %}active{% endif %}">
+    <a href="#" data-toggle="collapse" data-target="#taxonomy" class="{% if 'taxonomy' in sidebar_group %}collapsed{% endif %}" aria-expanded="true">
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Taxonomy <span class="caret"></span>
+    </a>
+    <ul id="taxonomy" class="sidebar-items collapse {% if 'taxonomy' in sidebar_group %}in{% endif %}" aria-expanded="true">
+        <li>{% include '_sidebar_item.html' with url='browse_tag' label='Browse Tag'%}</li>
+        <li>{% include '_sidebar_item.html' with url='browse_election_year' label='Browse Election Year'%}</li>
+        <li>{% include '_sidebar_item.html' with url='browse_video_format' label='Browse Video Format'%}</li>
+    </ul>
+</li>
+
